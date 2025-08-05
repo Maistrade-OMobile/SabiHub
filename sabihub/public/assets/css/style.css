@@ -1,0 +1,764 @@
+/*======================
+     01.BASICS - UPDATED COLORS
+========================*/
+
+:root {
+    --pColor: #ee390f;    /* Primary brand color - Orange Red */
+    --sColor: #f9b700;    /* Secondary brand color - Same Orange Red */
+    --textColor: #35363A; /* Text color */
+    --borderColor: #ebebeb; /* Border color */
+    --lightTextColor: rgba(53, 54, 58, .6); /* Light text */
+    --gradient: var(--sColor), var(--pColor); /* Gradient definition */
+    --darkBg: #1a1a1a; /* Dark background */
+    --grayBg: #2d2d2d; /* Gray background */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    color: var(--textColor);
+    line-height: normal;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColor);
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+.lightTextColor {
+    color: var(--lightTextColor);
+}
+
+.btn-pay-gradient {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to bottom, var(--gradient));
+    transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+}
+
+.btn-pay-gradient-outline {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    color: transparent;
+    background: linear-gradient(to bottom, var(--gradient));
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: transparent;
+    border-radius: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-pay-gradient-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px; 
+    background: linear-gradient(to bottom, var(--gradient));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.btn-pay-gradient:hover {
+    color: #fff;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, var(--gradient)) !important;
+    color: white;
+}
+
+.text-color-gradient {
+    background: linear-gradient(to bottom, var(--gradient)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.fs-small {
+    font-size: 70%;
+    color: var(--textColor) !important;
+    background: none !important;
+    font-weight: 400 !important;
+}
+
+.bg-p-light {
+    border: 1px solid rgba(238, 57, 15, 0.3) !important;
+    background-color: rgba(238, 57, 15, 0.05) !important;
+}
+
+.border-p {
+    border-color: var(--pColor) !important;
+}
+
+/*======================
+     LOGIN PAGE STYLES - UPDATED
+========================*/
+
+body.member {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--darkBg) 0%, var(--grayBg) 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.member-container {
+    min-height: 100vh;
+    align-items: center !important;
+    max-width: 1200px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.member-container_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--textColor);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.member-container_subtitle {
+    font-size: 1.1rem;
+    color: var(--lightTextColor);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.form-label {
+    color: var(--textColor);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 2px solid var(--borderColor);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+    border-color: var(--pColor);
+    box-shadow: 0 0 0 3px rgba(238, 57, 15, 0.1);
+    background: white;
+}
+
+.form-control::placeholder {
+    color: var(--lightTextColor);
+}
+
+/* Override the default btn-pay-gradient for login page */
+body.member .btn-pay-gradient {
+    background: linear-gradient(135deg, var(--pColor) 0%, var(--sColor) 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+body.member .btn-pay-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(238, 57, 15, 0.4);
+    background: linear-gradient(135deg, rgba(238, 57, 15, 0.9) 0%, rgba(238, 57, 15, 0.7) 100%);
+    color: white;
+}
+
+.form-check-input:checked {
+    background-color: var(--pColor);
+    border-color: var(--pColor);
+}
+
+.form-check-input:focus {
+    border-color: var(--pColor);
+    box-shadow: 0 0 0 0.25rem rgba(238, 57, 15, 0.25);
+}
+
+.educational-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.educational-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.educational-image:hover {
+    transform: scale(1.05);
+}
+
+.educational-text {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.educational-text h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.educational-text p {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.floating-icon {
+    position: absolute;
+    color: rgba(238, 57, 15, 0.2);
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) { 
+    top: 20%; 
+    right: 10%; 
+    animation-delay: 0s; 
+}
+
+.floating-icon:nth-child(2) { 
+    top: 60%; 
+    right: 20%; 
+    animation-delay: 2s; 
+}
+
+.floating-icon:nth-child(3) { 
+    top: 40%; 
+    right: 5%; 
+    animation-delay: 4s; 
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.forgot-password a {
+    color: var(--pColor);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: rgba(238, 57, 15, 0.8);
+    text-decoration: underline;
+}
+
+/* Form validation states */
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-valid {
+    border-color: var(--pColor);
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.valid-feedback {
+    color: var(--pColor);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Loading state for button */
+.btn-pay-gradient:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-pay-gradient.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-pay-gradient.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Additional accent colors for educational elements */
+.accent-orange {
+    color: var(--pColor) !important;
+}
+
+.bg-accent-orange {
+    background-color: var(--pColor) !important;
+}
+
+.border-accent-orange {
+    border-color: var(--pColor) !important;
+}
+
+/* Enhanced dark theme support */
+.dark-theme {
+    background: var(--darkBg);
+    color: #ffffff;
+}
+
+.dark-theme .login-card {
+    background: rgba(45, 45, 45, 0.95);
+    color: #ffffff;
+    border: 1px solid rgba(238, 57, 15, 0.2);
+}
+
+.dark-theme .form-control {
+    background: rgba(45, 45, 45, 0.8);
+    color: #ffffff;
+    border-color: rgba(238, 57, 15, 0.3);
+}
+
+.dark-theme .form-control:focus {
+    background: rgba(45, 45, 45, 1);
+    border-color: var(--pColor);
+}
+
+.dark-theme .form-label {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member-container {
+        padding: 1rem;
+    }
+    
+    .login-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .member-container_title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .educational-side {
+        display: none !important;
+    }
+    
+    .floating-elements {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-card {
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+    }
+    
+    .member-container_title {
+        font-size: 1.75rem;
+    }
+    
+    .member-container_subtitle {
+        font-size: 1rem;
+    }
+    
+    body.member .btn-pay-gradient {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-card {
+        padding: 2.5rem 2rem;
+    }
+    
+    .educational-image {
+        max-width: 350px;
+    }
+}
+
+/* Animation classes for smooth page load */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-right.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/*======================
+     01.DASHBOARD =================
+========================*/
+
+    body.dashboard {
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+        width: 100%;
+        
+        background-color: #F9FAFB;
+    }
+
+    .dashboard .nav-logo_img {
+        height: 60px;
+    }
+
+    .dashboard .main-content {
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+   
+
+    .top-sidebar img {
+        color: #813E95;
+    }
+
+    .dashboard .top-sidebar,
+    .dashboard .bottom-sidebar {
+        background-color: #fff;
+        padding: 30px 24px;
+        border: 1px solid var(--borderColor);
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+    
+
+    .dashboard .top-sidebar li+li,
+    .dashboard .bottom-sidebar li+li {
+        margin-top: 30px;
+    }
+
+    .dashboard .sidebar a.active,
+    .dashboard .sidebar a:hover:not(.btn-pay-gradient),
+    .dashboard-content_transaction-box a.active{
+        background: linear-gradient(to bottom, var(--gradient)); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        text-decoration: none;
+        display: block;
+    }
+
+    .dashboard .sidebar a svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .dashboard .sidebar p{
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .dashboard .btn-pay-gradient {
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+    .dashboard a.btn-pay-gradient:hover {
+        background: none;
+        background-color: #813E95;
+        color: white;
+
+    }
+
+    .dashboard-content {
+        overflow-x: hidden;
+    }
+
+    .dashboard-content_balance .balance-card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+    .balance-card.edu-available{
+        background-color: #F2ECF4;
+        padding: 16px;
+    }
+    
+    .balance-card.edu-paid{
+        background-color: var(--pColor);
+        padding: 16px;
+        color: #fff;
+    }
+
+    .balance-card.edu-paid .balance-card_subtitle {
+        color: #fff;
+    }
+
+    .balance-card .balance-card_subtitle{
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--lightTextColor);
+    }
+
+    .balance-card .balance-card_title{
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .balance-card .svg-box {
+        background-color: #FBFBFB;
+        height: 24px;
+        width: 24px;
+        padding: 4px;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    .balance-card .svg-box svg{
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+    .dashboard-content_details th, td {
+        padding: 16px 24px !important;
+        font-size: 12px;
+    }
+
+    th {
+        background-color: var(--sColor) !important;
+    }
+
+    table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataTable td.dt-type-numeric, table.dataTable td.dt-type-date {
+        text-align: center;
+    }
+
+    .dt-length {
+        display: flex;
+        flex: 1;
+        flex-wrap: nowrap;
+    }
+/* 
+    .dt-length-0 {
+        display: block !important;
+        text-wrap: nowrap;
+    } */
+
+    .dt-length select {
+        margin-right: 5px !important;
+    }
+    .dt-search {
+        position: relative;
+    }
+
+    .dt-search label {
+        display: none !important;
+    }
+
+    .dt-search input {
+        padding-left: 30px !important;
+        height: 36px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 4px !important;
+    }
+
+    .dt-search input::placeholder {
+        color: #aaa; /* Placeholder color */
+    }
+
+    .dt-search input:focus {
+        outline: none;
+        border: 1px solid var(--sColor) !important;
+        background-color: rgba(53, 54, 58, .02) !important;
+        box-shadow: 0 0 5px rgba(53, 54, 58, .2) !important;
+    }
+
+    .dt-search::before {
+        content: '' !important;
+        position: absolute !important;
+        left: 10px !important;
+        color: black !important;;
+        top: 50% !important;
+        margin-left: 5px !important;
+        width: 16px !important;
+        height: 16px !important;
+        background-image: url('/assets/img/svg/search.svg') !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        transform: translateY(-50%) !important;
+        -webkit-transform: translateY(-50%) !important;
+        -moz-transform: translateY(-50%) !important;
+        -ms-transform: translateY(-50%) !important;
+        -o-transform: translateY(-50%) !important;
+    }   
+
+
+header {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .nav-logo_img {
+        height: 70px;
+        width: auto;
+    }
+
+    .nav-logo_text {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    header .header-title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    header .header-subtitle {
+        font-size: 8px;
+        font-weight: 300;
+        color: var(--lightTextColor);
+    }
+
+    header button.toggler {
+        height: 36px;
+        width: 36px;
+        padding: 4px;
+        background-image: linear-gradient(to bottom, var(--gradient));
+        border: 2px solid transparent;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+}
