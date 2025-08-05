@@ -319,16 +319,49 @@
                             </div>
                         </div>
 
+
+                       
+
                         <!-- Partner 4 -->
                         <div class="testimonial_slider">
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-md-2 text-center">
-                                    <img src="img/partners/industrial_awakening.png" alt="Industrial Awakening" class="img-fluid mb-2 partner-logo">
+                                    <img src="img/partners/industralawking.png" alt="Industrial Awakening" class="img-fluid mb-2 partner-logo">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="testimonial_slider_text">
                                         <h4>Industrial Awakening</h4>
                                         <p>Training and upskilling partner focused on empowering creators and educators.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial_slider">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-2 text-center">
+                                    <img src="img/partners/napps.png" alt="NAPPS" class="img-fluid mb-2 partner-logo">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial_slider_text">
+                                        <h4>NAPPS</h4>
+                                        <p>National Association Of Proprietors Of Private Schools.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="testimonial_slider">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-2 text-center">
+                                    <img src="img/partners/maistrade.png" alt="Industrial Awakening" class="img-fluid mb-2 partner-logo">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial_slider_text">
+                                        <h4>MaisTrade</h4>
+                                        <p> MaisTrade, the cooperative platform designed to help farmers access better markets, resources, and support for sustainable growth.</p>
                                     </div>
                                 </div>
                             </div>
