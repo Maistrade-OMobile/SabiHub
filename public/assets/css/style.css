@@ -9,7 +9,7 @@
     --borderColor: #ebebeb; /* Border color */
     --lightTextColor: rgba(53, 54, 58, .6); /* Light text */
     --gradient: var(--sColor), var(--pColor); /* Gradient definition */
-    --darkBg: #1a1a1a; /* Dark background */
+    --darkBg: #1a1a1a; /* Dark background  */
     --grayBg: #2d2d2d; /* Gray background */
 }
 

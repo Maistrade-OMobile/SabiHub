@@ -23,10 +23,10 @@
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="https://sabihub.ng/assets/img/logo.png">
     <meta name="twitter:title" content="Sabihub.ng - Empowering Innovation with OMobile & Glo">
     <meta name="twitter:description" content="Join Sabihub.ng and partners like OMobile & Glo to accelerate your startup, learn new skills, and connect with innovators across Nigeria.">
-    <meta name="twitter:image" content="https://sabihub.ng/assets/images/preview.jpg">
+    <meta name="twitter:image" content="https://sabihub.ng/assets/img/logo.png">
 
     <!-- Favicon -->
     <link rel="icon" href="https://sabihub.ng/favicon.ico" type="image/x-icon">
