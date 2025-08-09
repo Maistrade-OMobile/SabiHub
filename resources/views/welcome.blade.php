@@ -9,6 +9,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- SEO Meta Tags -->
+    <title>Sabihub.ng - Empowering Innovation & Technology in Nigeria with OMobile & Glo</title>
+    <meta name="description" content="Sabihub.ng partners with OMobile, Glo, and other leading organizations to empower innovation, technology, and entrepreneurship in Nigeria. Join our network and access resources, training, and opportunities to grow your tech journey.">
+    <meta name="keywords" content="Sabihub, OMobile, Glo, technology, Nigeria tech hub, startup training, entrepreneurship, innovation, digital skills, Nigerian startups, tech partnerships">
+    <meta name="author" content="Sabihub.ng">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Sabihub.ng - Powered by Innovation with OMobile & Glo">
+    <meta property="og:description" content="Sabihub.ng collaborates with OMobile, Glo, and top partners to drive innovation, entrepreneurship, and digital skills in Nigeria.">
+    <meta property="og:image" content="https://sabihub.ng/assets/img/logo.png">
+    <meta property="og:url" content="https://sabihub.ng">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sabihub.ng - Empowering Innovation with OMobile & Glo">
+    <meta name="twitter:description" content="Join Sabihub.ng and partners like OMobile & Glo to accelerate your startup, learn new skills, and connect with innovators across Nigeria.">
+    <meta name="twitter:image" content="https://sabihub.ng/assets/images/preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://sabihub.ng/favicon.ico" type="image/x-icon">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>SabiHub</title>
@@ -30,6 +52,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
 
@@ -43,12 +66,53 @@
         object-fit: contain;
     }
 
+    .logo {
+            width: 141px;
+            height: 67px;
+            object-fit: contain;
+        }
+
+
     .testimonial_slider .col-md-2 {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100px;
     }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        display: flex;
+        align-items: flex-start; /* aligns icon with top of text */
+        gap: 0.5rem; /* spacing between icon and text */
+        margin-bottom: 1rem; /* spacing between items */
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    ul li span[class^="ti-"] {
+        flex-shrink: 0; /* prevents icon from shrinking */
+        font-size: 1.2rem;
+        margin-top: 2px; /* adjusts vertical alignment */
+    }
+
+    .social_icon a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+    }
+
+    .social_icon a:hover {
+    color: #007bff;
+    }
+
+
 
 
     </style>
@@ -62,7 +126,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="#"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="#"> <img class="logo" src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -207,15 +271,21 @@
                 </div>
                 <div class="col-md-5 col-lg-5">
                     <div class="learning_member_text">
-                        <h5>About us</h5>
+                        <br/>
+                        <h3>About us</h3>
                         <h2>We connect and empower everyone in the education ecosystem.</h2>
                         <p>SabiHub is a digital education platform designed to meet the unique needs of schools, educators, students, parents, and content creators across Africa. With accessible tools and inclusive design, we make learning social, smart, and sustainable.</p>
                         <ul>
-                            <li><span class="ti-pencil-alt"></span>Curriculum-aligned for primary & secondary schools.</li>
-                            <li><span class="ti-ruler-pencil"></span>FReal-time analytics and student tracking.</li>
-                            <li><span class="ti-ruler-pencil"></span>Creator monetization and branded partnerships.</li>
+                            <li style="display: flex; align-items: center; gap: 6px;">
+                                <span class="ti-pencil-alt"></span>
+                                Curriculum-aligned for primary & secondary schools.
+                            </li>
+
+                           
+                            <li style="display: flex; align-items: center; gap: 6px;"><span class="ti-ruler-pencil"></span>FReal-time analytics and student tracking.</li>
+                            <li style="display: flex; align-items: center; gap: 6px;"><span class="ti-tablet"></span>Creator monetization and branded partnerships.</li>
                         </ul>
-                        <a href="#" class="btn_1">Read More</a>
+                        {{-- <a href="#" class="btn_1">Read More</a> --}}
                     </div>
                 </div>
             </div>
@@ -376,111 +446,121 @@
 
 
    <div class="modal fade" id="waitingListModal" tabindex="-1" role="dialog" aria-labelledby="waitingListModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content p-3 py-5 p-md-5">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-3 py-5 p-md-5">
 
-               <a class="navbar-brand" href="#"> <img src="img/logo.png" alt="logo"> </a>
+                <a class="navbar-brand" href="#"> <img class="logo" src="img/logo.png" alt="logo"> </a>
 
-            <!-- Modal Close Button -->
-            <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-light close mb-3 border rounded-md p-1" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <!-- Modal Close Button -->
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-light close mb-3 border rounded-md p-1" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Title -->
+                <h5 class="text-center mb-4" id="waitingListModalLabel">Join Our WaitingList</h5>
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <!-- Modal Body & Form -->
+                <form id="waitingListForm" action="/join-waitlist" method="POST">
+                    <div class="modal-body px-1 px-md-3">
+                        
+                        <!-- User Type Dropdown -->
+                        <div class="form-group">
+                            <label for="userType">I am a:</label>
+                            <select class="form-control" id="userType" name="user_type" required>
+                                <option value="" selected disabled>Select user type</option>
+                                <option value="creator">Creator</option>
+                                <option value="parent">Parent</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="school">School</option>
+                            </select>
+                        </div>
+
+                        <!-- Common Fields -->
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname" required>
+                        </div>
+
+                        <div class="form-group" id="othernameField">
+                            <label for="othername">Other Names</label>
+                            <input type="text" class="form-control" id="othername" name="othername">
+                        </div>
+
+                        <!-- Student/Teacher/Parent School -->
+                        <div class="form-group d-none" id="schoolField">
+                            <label for="school">School</label>
+                            <input type="text" class="form-control" id="school" name="school">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group d-none" id="emailField">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" required name="email">
+                        </div>
+
+                        <div class="form-group d-none" id="phoneField">
+                            <label for="phone">Phone Number</label>
+                            <input type="phone" class="form-control" id="phone" required name="phone">
+                        </div>
+
+                        <!-- For School Type -->
+                        <div id="schoolExtraFields" class="d-none">
+                            <div class="form-group">
+                                <label for="schoolName">School Name</label>
+                                <input type="text" class="form-control" id="schoolName" name="school_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactPerson">Contact Person</label>
+                                <input type="text" class="form-control" id="contactPerson" name="contact_person">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactPersonContact">Contact Person Contact</label>
+                                <input type="text" class="form-control" id="contactPersonContact" name="contact_person_contact">
+                            </div>
+                        </div>
+
+
+                        <!-- For Creator Type -->
+                        <div id="creatorExtraFields" class="d-none">
+                            <div class="form-group">
+                                <label for="platform">Platform</label>
+                                <input type="text" class="form-control" id="platform" name="platform" placeholder="e.g. YouTube, Instagram">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileLink">Profile Link</label>
+                                <input type="url" class="form-control" id="profileLink" name="profile_link" placeholder="https://...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contentArea">Content Area</label>
+                                <input type="text" class="form-control" id="contentArea" name="content_area" placeholder="e.g. Education, Comedy">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer border-0 px-1 px-md-3">
+                        <button type="submit" class="btn btn_1 btn-block">Submit</button>
+                    </div>
+                </form>
             </div>
-
-            <!-- Modal Title -->
-            <h5 class="text-center mb-4" id="waitingListModalLabel">Join Our WaitingList</h5>
-
-            <!-- Modal Body & Form -->
-            <form id="waitingListForm" action="/join-waitlist" method="POST">
-                <div class="modal-body px-1 px-md-3">
-                    
-                    <!-- User Type Dropdown -->
-                    <div class="form-group">
-                        <label for="userType">I am a:</label>
-                        <select class="form-control" id="userType" name="user_type" required>
-                            <option value="" selected disabled>Select user type</option>
-                            <option value="creator">creator</option>
-                            <option value="parent">Parent</option>
-                            <option value="teacher">Teacher</option>
-                            <option value="school">School</option>
-                        </select>
-                    </div>
-
-                    <!-- Common Fields -->
-                    <div class="form-group">
-                        <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" id="firstname" name="firstname" required>
-                    </div>
-
-                    <div class="form-group" id="othernameField">
-                        <label for="othername">Other Names</label>
-                        <input type="text" class="form-control" id="othername" name="othername">
-                    </div>
-
-                    <!-- Student/Teacher/Parent School -->
-                    <div class="form-group d-none" id="schoolField">
-                        <label for="school">School</label>
-                        <input type="text" class="form-control" id="school" name="school">
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group d-none" id="emailField">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
-
-                    <div class="form-group d-none" id="phoneField">
-                        <label for="phone">Phone Number</label>
-                        <input type="phone" class="form-control" id="phone" name="phone">
-                    </div>
-
-                    <!-- For School Type -->
-                    <div id="schoolExtraFields" class="d-none">
-                        <div class="form-group">
-                            <label for="schoolName">School Name</label>
-                            <input type="text" class="form-control" id="schoolName" name="school_name">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contactPerson">Contact Person</label>
-                            <input type="text" class="form-control" id="contactPerson" name="contact_person">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contactPerson">Contact Person Contact</label>
-                            <input type="text" class="form-control" id="contactPersonContact" name="contact_person_contact">
-                        </div>
-                    </div>
-
-
-                    <!-- For Creator Type -->
-                    <div id="creatorExtraFields" class="d-none">
-                        <div class="form-group">
-                            <label for="platform">Platform</label>
-                            <input type="text" class="form-control" id="platform" name="platform" placeholder="e.g. YouTube, Instagram">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="profileLink">Profile Link</label>
-                            <input type="url" class="form-control" id="profileLink" name="profile_link" placeholder="https://...">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contentArea">Content Area</label>
-                            <input type="text" class="form-control" id="contentArea" name="content_area" placeholder="e.g. Education, Comedy">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer border-0 px-1 px-md-3">
-                    <button type="submit" class="btn btn_1 btn-block">Submit</button>
-                </div>
-            </form>
         </div>
     </div>
-</div>
 
 
 
@@ -524,7 +604,7 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
-                        <a href="#"> <img src="img/logo.png" alt=""> </a>
+                        <a href="#"> <img class="logo" src="img/logo.png" alt=""> </a>
                         <p>SabiHub is an all-in-one EdTech mobile application designed to connect schools, teachers, students, parents, and content creators. It provides a digital learning ecosystem that supports curriculum-based education, social learning, parental engagement, and creator-driven content.</p>
                     </div>
                 </div>
@@ -557,16 +637,30 @@
                     <div class="single-footer-widget footer_2">
                         <h4>Contact us</h4>
                         <div class="contact_info">
-                            <p><span> Address :</span> Hath of it fly signs bear be one blessed after </p>
-                            <p><span> Phone :</span> +2 36 265 (8060)</p>
-                            <p><span> Email : </span><a href="" class="__cf_email__" >Sabihub@mail.com</a> </p>
+                            <p><span> Address :</span> Suite 6, Third Floor, Pine Court, Gervis Road, Bournemouth, Dorset. 
+                                                    <br/> Suite S16, Second Floor, Febson Mall, Kitwe Street, Wuse Zone 4, Abuja, FCT.  </p>
+                            <p><span>Phone:</span> <a href="tel:+2348125720711">+234 812 572 0711</a></p>
 
-                            <div class="social_icon">
-                                <a href="#"> <i class="ti-facebook"></i> </a>
-                                <a href="#"> <i class="ti-twitter-alt"></i> </a>
-                                <a href="#"> <i class="ti-instagram"></i> </a>
-                                <a href="#"> <i class="ti-skype"></i> </a>
+                            <p><span>Email:</span> <a href="mailto:info@sabihub.ng">info@sabihub.ng</a></p>
+
+
+                                <div class="social_icon">
+                                    <a href="https://www.instagram.com/omobile_world" target="_blank">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/omobile-world" target="_blank">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/@omobileworld" target="_blank">
+                                        <i class="bi bi-youtube"></i>
+                                    </a>
+                                </div>
+
+
+                
+                            
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -649,7 +743,7 @@
         });
 
 
-     
+        
             $('#waitingListModal').on('show.bs.modal', function () {
                 $(this).addClass('modal-on-header');
                 $('.menu_fixed').addClass('z-index-removed');
@@ -659,50 +753,51 @@
                 $(this).removeClass('modal-on-header');
                 $('.menu_fixed').removeClass('z-index-removed');
             });
-        </script>
+   
+    </script>
 
-        <script>
-    $('#waitingListForm').on('submit', function (e) {
-        e.preventDefault();
+    <script>
+        $('#waitingListForm').on('submit', function (e) {
+            e.preventDefault();
 
-        var $form = $(this);
-        var formData = new FormData(this);
-        var csrfToken = $('meta[name="csrf-token"]').attr('content');
+            var $form = $(this);
+            var formData = new FormData(this);
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
 
-        $('#waitingListModal').modal('hide');
+            $('#waitingListModal').modal('hide');
 
-        $.ajax({
-            url: $form.attr('action'),
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            headers: {
-                'X-CSRF-TOKEN': csrfToken,
-                'Accept': 'application/json',
-            },
-            success: function (data) {
+            $.ajax({
+                url: $form.attr('action'),
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken,
+                    'Accept': 'application/json',
+                },
+                success: function (data) {
 
-                   $('#waitingListModal').modal('hide');
-            
-                    // Remove backdrop and open class if necessary
-                    $('body').removeClass('modal-open');
-                    $('.modal-backdrop').remove();
+                    $('#waitingListModal').modal('hide');
+                
+                        // Remove backdrop and open class if necessary
+                        $('body').removeClass('modal-open');
+                        $('.modal-backdrop').remove();
 
-                    if (data.status === 'already_exists') {
-                        $('#alreadyInWaitlist').modal('show');
-                    } else if (data.status === 'new_user') {
-                        $('#welcomeModal').modal('show');
-                        $form[0].reset();
-                    }
+                        if (data.status === 'already_exists') {
+                            $('#alreadyInWaitlist').modal('show');
+                        } else if (data.status === 'new_user') {
+                            $('#welcomeModal').modal('show');
+                            $form[0].reset();
+                        }
 
-            },
-            error: function (xhr, status, error) {
-                console.error('Submission Error:', error);
-            }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Submission Error:', error);
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 
 

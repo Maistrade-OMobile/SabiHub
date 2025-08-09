@@ -106,7 +106,7 @@ class WaitlistController extends Controller
         WaitingList::create($validated);
 
 
-         // Send welcome email
+        // Send welcome email
     
         $data = [
             'userName' => $validated['firstname'],
