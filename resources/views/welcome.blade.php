@@ -195,7 +195,8 @@
                 <!-- Core Feature Intro -->
                 <div class="col-sm-6 col-xl-4 align-self-center">
                     <div class="single_feature_text">
-                        <h2>Core <br> Features</h2>
+                        <h2 class="text-center text-sm-left">Core <br> Features</h2>
+                    
                         <p>Empowering students, teachers, schools, and parents with smart tools for effective learning, teaching, and management—all in one platform.</p>
                     </div>
                 </div>
@@ -604,7 +605,10 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
-                        <a href="#"> <img class="logo" src="img/logo.png" alt=""> </a>
+                       <a href="#" class="d-block text-center">
+                            <img class="logo" src="img/logo.png" alt="">
+                        </a>
+
                         <p>SabiHub is an all-in-one EdTech mobile application designed to connect schools, teachers, students, parents, and content creators. It provides a digital learning ecosystem that supports curriculum-based education, social learning, parental engagement, and creator-driven content.</p>
                     </div>
                 </div>
