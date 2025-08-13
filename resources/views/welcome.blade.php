@@ -454,7 +454,7 @@
 
                 <!-- Modal Close Button -->
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-light close mb-3 border rounded-md p-1" data-dismiss="modal" aria-label="Close">
+                    <button type="button" id="closeBtn" class="btn btn-light close mb-3 border rounded-md p-1" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -513,7 +513,8 @@
 
                         <div class="form-group d-none" id="phoneField">
                             <label for="phone">Phone Number</label>
-                            <input type="phone" class="form-control" id="phone" required name="phone">
+                           <input type="tel" class="form-control" id="phone" name="phone" maxlength="15" required>
+
                         </div>
 
                         <!-- For School Type -->
@@ -530,7 +531,7 @@
 
                             <div class="form-group">
                                 <label for="contactPersonContact">Contact Person Contact</label>
-                                <input type="text" class="form-control" id="contactPersonContact" name="contact_person_contact">
+                                <input type="text" class="form-control" id="contactPersonContact" maxlength="15" name="contact_person_contact">
                             </div>
                         </div>
 
@@ -570,7 +571,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-3 py-5 p-md-5">
             <div class="d-flex justify-content-end">
-                <button type="button" class="btn-close mb-3 border rounded-md p-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" id="closeBtn2"  class="btn-close mb-3 border rounded-md p-1" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body mx-1 mx-md-3 text-center">
                 <img src="./img/noto_bubble-tea.svg" class="img-fluid mb-3" alt="Bubble Tea">
@@ -587,7 +588,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content p-3 py-5 p-md-5">
             <div class="d-flex justify-content-end">
-                <button type="button" class="btn-close mb-3 border rounded-md p-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" id="closeBtn3" class="btn-close mb-3 border rounded-md p-1" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body mx-1 mx-md-3 text-center">
                 <img src="./img/fxemoji_confetti.svg" alt="Confetti" class="img-fluid mb-3">
@@ -761,6 +762,21 @@
     </script>
 
     <script>
+
+        document.getElementById('closeBtn').addEventListener('click', function () {
+            window.location.href = '/';
+        });
+
+         document.getElementById('closeBtn2').addEventListener('click', function () {
+            window.location.href = '/';
+        });
+
+        document.getElementById('closeBtn3').addEventListener('click', function () {
+            window.location.href = '/';
+        });
+
+
+
         $('#waitingListForm').on('submit', function (e) {
             e.preventDefault();
 
